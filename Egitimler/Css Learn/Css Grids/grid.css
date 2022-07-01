@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 200px 250px; /* We can say that First column's width is 200px, second column's width is 100px .
+    grid-template-columns: 200px 250px; /* We can say that First column's width is 200px, second column's width is 250px .
     /* grid-template-columns: 2fr 1fr; fr means like flex grow. First column grow up like 2x and second column grow up like 1x .*/
     /* grid-template-columns: repeat(4, 100px);  means set the column number 4 and each column width will be 100px*/
 
