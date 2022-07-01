@@ -1,0 +1,64 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 250px; /* We can say that First column's width is 200px, second column's width is 100px .
+    /* grid-template-columns: 2fr 1fr; fr means like flex grow. First column grow up like 2x and second column grow up like 1x .*/
+    /* grid-template-columns: repeat(4, 100px);  means set the column number 4 and each column width will be 100px*/
+
+    /*grid-auto-rows: 150px; /* all rows will be 150px height */
+    grid-auto-rows: minmax(150px, auto); /* min row height will be 150px and max height will be auto(depends on the content) */
+    
+    /*grid-template-rows: 200px 150px; /* we set the first row's height to 200px and second row's height to 150px */
+
+    /*grid-row-gap: 20px; give 20px space to each row between items */
+    /*grid-column-gap: 10px;  give 10px space to each column between items */
+    grid-gap: 20px; /* give 20px space to columns and rows between items */
+
+    grid-template-areas: 
+        "header header" /* first value of header match with first column(first row) and second value of header match with second column (first row) */
+        "sidebar content" /* first value of sidebar match with first column (second and third row) and second value of content match with second column (second and third row) */
+        "sidebar content";   /* Because sidebar and content set 2  times and that means they wil contain 2 rows */
+
+        justify-content: center; /* items aligns to center of the container horizontally 
+                                We don't use flex-end or flex-start. We just use end or start property for grid. 
+                                Because flex property with start or end is using with flexbox only */
+
+        align-content: center;
+        height: 100vh;
+
+        justify-items: center; /* this property aligns the items to the center of the column 
+                                if we give start property, items aligns to the start of the column*/
+
+        align-items: center; /* this property align the items to the center of the row 
+                            if we give start property, items aligns to the start of the row */
+}
+
+.grid-item-1 {
+   /* grid-area: header;  This property is used with "grid-template-areas" property  */
+
+    /*grid-column: 1 / -1;  this property works as same as  grid-column-start: 1; and grid-column-end: -1;
+                            We can also say "span 2" instead of 1 / -1. thats mean this item will be 2 columns width*/
+
+    
+    /*grid-column-start: 1;  if we give start to 1 and end to 2, thats mean this item start with first column and end with start of the second column */
+    /*grid-column-end: -1;     if we give start to 1 and end to 3, thats mean this item start with first column and end with start of the third column */
+                            /* if we give start to 1 and end to -1, thats mean this item start with first column and end with last or farthest column */
+
+    align-self: start; /* this item aligns itself to the start of the row */
+    justify-self: center; /* this item aligns itself to the center or the column */
+}
+
+
+.grid-item-2 {
+   /* grid-area: sidebar; This property is used with "grid-template-areas" property */
+
+    /*grid-row: span 2;  thats mean this item will be 2 rows height */
+
+   /*grid-row-start: 2;  if we give start to 2 and end to 4, thats mean this item start with second row and end with start of the fourth column */
+    /* grid-row-end: 4; */
+}
+
+.grid-item-3 {
+   /* grid-area: content; This property is used with "grid-template-areas" property */
+
+   /*grid-row: span 1;  thats mean this item will be 1 rows height */
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+        /* Specificity = Inline style > id > class > global tag(h1,h2,div) */
+        /* if we add !important after the color: green , this specificity is bigger than the others 
+            Example = color: blue !important */
+
+        /* > = direct child,  but space is the any child below */
+        div.red.greentext { /* .'lar boşluksuz yan yana olursa aynı div içerisindeki class'lar etkilenir */
+            background: red;
+            color: green;
+        }
+
+        div .red.bluetext { /* div'den sonra gelen .'lar boşluklu olursa div'in altındaki div'in içerisindeki class'lar etkilenir */
+            background: red;
+            color: blue;
+        }
+        li.red ~ li { /* every single siblings li AFTER(not before just after) comes to li with class="red"  */
+            background: red;
+        }
+        li.red + li { /* ONLY just next sibling li after comes to li with class="red"  */
+            background: red;
+        }
+        li:hover{ /* every single li that user hover */
+            background: red;
+        }
+        input:focus{ /* focus means when user click the input */ /* in this example, when user click the input, the background of input will be red */
+            background: red;
+        }
+        input:required{ /* if input is required and get the required key inside its tag, the background of the input will be red */
+            background: red;
+        }
+        input:checked{ /* if the input is checked, the margin of the input will be 50px and if the input is unchecked, the margin of the input is default */
+            margin: 50px;
+        }
+        input:disabled{ /* disappear on the screen */
+            margin: 50px;
+        }
+        li:first-child{ /* just only select very first child. We cant use like li.red:first-child*/
+            background: blue;
+        }
+        li:nth-child(4){ /* select the nth child of li. If we say li:nth-child(3n) = every third child */
+            background: green;
+        }
+        span:first-of-type{ /* just the very first element of type span's background will be yellow */
+            background: yellow;
+        }
+        span:last-of-type{ /* just the last element of type span's background will be orange */
+            background: orange;
+        }
+        span:nth-last-of-type(2){ /* just the second to last element of type span's background will be aqua */
+            background: aqua;
+        }
+        span:only-of-type{ /* span types will be red */
+            background: red;
+        }
+        span:not() { /* select any element that does not match the selector you pass to. If we use span:not(.first) means every span element will be purple
+                        except span with class="first" */
+            background: purple;
+        }
+        div.lastdiv::before{
+            content: "Before";
+            background: red;
+        }
+        div.lastdiv::after{
+            content: "After";
+            background: red;
+        }
+        [data-red] {
+            background: red;
+        }
+        [data-blue="true"] { /* data-blue^="12" means the data starts with 12, data-blue$="23" means the data ends with 23, 
+                                data-blue*="12" means the data has 12 in anywhere  */
+            background: blue;
+        }
+    
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css EXAMPLE</title>
+</head>
+<body>
+    <input required type="text">
+    <input required type="checkbox">
+    <input disabled type="checkbox">
+    <br>
+    <span class="first">This is a first span</span>
+    <span>This is a second span</span>
+    <span>This is a third span</span>
+    <span>This is a fourth span</span>
+    <span>This is a fifth span</span>
+    <span>This is a last span</span>
+    <br><br>
+    <div data-red>This is a data-red Div</div>
+    <br>
+    <div data-blue="true">This is a data-blue Div</div>
+    <br>
+    <div class="red greentext">This is a div</div>
+    <br>
+    <div>Deneme div
+        <div class="red bluetext">This is a blue text div</div>
+    </div>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li class="red">Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+    </ul>
+
+    <div class="lastdiv">This is a Last Div</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.flexbox-container {
+    display: flex;
+    /* justify-content: center;  justify content sets items horizontally  */
+    /* align-items: center;    align items is sets items vertically  */
+    /*flex-direction: column; */
+
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.flexbox-item1 {
+    /* flex: 1 0 0px;  first one is flex-grow, second one is flex-shrink, the third one is flex-basis */
+    /* flex: 1;  assign flex-shrink and flex-basis = 1 */
+    min-height: 100px;
+    flex-shrink: 0; /* The item with this feature does not shrink  */
+    align-self: flex-end; /* The item that this property is given aligns itself */
+    order: 3;   /* The item to which this property is given determines its order. */
+}
+
+.flexbox-item2 {
+    min-height: 200px;
+    align-self: center; /* The item that this property is given aligns itself */
+    order: 1;   /* The item to which this property is given determines its order. */
+    flex-grow: 2;
+    flex-basis: 0;
+    
+}
+
+.flexbox-item3 {
+    min-height: 300px;
+    flex-grow: 1; /* The item that this feature is given expands to fill the remaining space. */ 
+    order: 2;   /* The item to which this property is given determines its order. */
+    flex-basis: 0;
+}

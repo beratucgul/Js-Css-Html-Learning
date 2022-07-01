@@ -1,0 +1,72 @@
+:root {
+    --div-background-color : red; /* any declaration that begins with two hyphens and then name of the variable comes afterward  */
+    --text-color: black;
+    --div-padding: 20px;
+    --div-margin: 10px;
+}
+
+body {
+    background-color: var(--background-color, pink);
+}
+
+.child {    /* includes all child elements */
+    background-color: var(--div-background-color);
+    color: var(--text-color);
+}
+
+.one {
+    --div-background-color: blue;
+    --text-color: white;
+}
+
+.one-one {
+    margin: var(--div-margin);
+    padding: var(--div-padding);
+}
+
+.one-two {
+    margin: var(--div-margin);
+    padding: var(--div-padding);
+}
+
+
+
+.side-links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-link-youtube {
+  background-color: red;
+}
+
+.side-link-twitter {
+  background-color: #1DA1F2;
+}
+
+.side-link-github {
+  background-color: #6e5494;
+}
+
+.side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.side-link-icon {
+  color: white;
+  font-size: 30px;
+}

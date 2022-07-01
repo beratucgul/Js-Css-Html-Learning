@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            background-color: red;
+            height: 100px;
+        }
+    </style>
+    <style>
+        .container {
+           /* width: calc(400px - calc(100px + 200px)); */ /* We have to give space between property and operation*/ 
+            width: calc(100% - 30px); /* Calc allow us to combined different units. */
+            margin: 0 auto; /* If we give the margin an auto property, it divides the 30px value we gave in the calc 
+                            function by 2 and gives a 15-pixel margin from the right and left of the item.t */
+
+            /*--width: 100px;
+            width: calc(var(--width) * 2); This function set the container's width to 2 * 100px */
+        }
+        :root {
+            --hue: 180;
+        }
+        .primary {
+            background-color: hsl(180, 100%, 50%);          /* First and second ones of background-color gives us the same result */
+            background-color: hsl(var(--hue), 100%, 50%);
+        }
+        .danger{
+            background-color: hsl(0, 100%, 50%);            /* First and second ones of background-color gives us the same result */
+            background-color: hsl(calc(var(--hue) - 180), 100%, 50%); 
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc Example</title>
+</head>
+<body>
+    <div class="container"></div>
+    <button class="primary">Primary</button>
+    <button class="danger">Danger</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    color: red;
+}
+
+.title {
+    font-size: 6rem;
+}
+
+.subtitle {
+    font-size: 4rem;
+}
+
+@media all and (max-width: 800px) {     /* Screen size with 800 height or lower will be blue body color */
+    body {
+        color: blue;
+    }
+}
+
+@media print {          /* when user print the page, the body colors will be green */
+    body {
+        color: green; 
+    }
+}
+
+@media (orientation: landscape) and (max-width: 500px){  /* when we use the phone with landscape mode and max 500px width, the title color will be green */
+    .title {
+        color: green;
+    }
+}
+
+@media (orientation: portrait) {  /* when we use the phone with portrait mode, the title color will be cyan */
+    .title {
+        color: cyan;
+    }
+}

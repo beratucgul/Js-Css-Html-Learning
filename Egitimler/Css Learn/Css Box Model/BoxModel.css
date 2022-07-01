@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+
+.box-one {
+    background-color: #EB5757;
+    padding: 20px;
+    border: 20px solid #9B51E0;
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box; /* this border-box is limited the whole div with 100(we gave 100 as height and width) width and height */
+}
+
+.box-two {
+    background-color: #2D9CDB;
+    border: 0 solid #27AE60;
+}

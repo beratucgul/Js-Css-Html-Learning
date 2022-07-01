@@ -1,0 +1,27 @@
+* {
+    font-size: 40px;
+}
+.parent {
+    height: 200vh;
+    background-color: lightskyblue;
+    position: relative; /*with using relative at parent div, element inside the parent div will fit the parent div and may not overflow */
+}
+
+.child-one {
+    /*  position: relative;   with using relative, the child div may overlap the other child div or child div can overflow its parent */
+    /*  position: absolute;  absolute, removes the element from flow and removes the empty part of the div or something*/
+    /* position: fixed;  ignores the position:relative from parent. if we give top: 0; the element will stick on the top of the screen */
+    position: sticky; /* it seems relative but when user scroll the screen, it will act like position:fixed */
+    top: 0;
+    background-color: greenyellow;
+}
+
+.child-two {
+    background-color: orange;
+
+}
+
+.child-three {
+    background-color: pink;
+
+}
