@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grandparent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            height: 180px;
+            width: 180px;
+        }
+        .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            height: 120px;
+            width: 120px;
+        }
+        .child {
+            background-color: green;
+            height: 60px;
+            width: 60px;
+        }
+    </style>
+
+    <script src="eventListener.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+</html>
