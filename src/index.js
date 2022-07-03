@@ -12,11 +12,18 @@ const store = createStore(allReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && win
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-  <React.StrictMode>
+  
     <App />
-  </React.StrictMode>
+  
   </Provider>
 );
+
+/*
+<React.StrictMode>
+<App />
+</React.StrictMode>
+Fetch request being called twice with this Strict Mode
+*/
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
