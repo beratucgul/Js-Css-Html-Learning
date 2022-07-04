@@ -5,6 +5,7 @@ import StateLearning from "./React Learning/React UseState/stateLearning"
 import Redux from "./ReduxFolder/redux"
 import Fetch from "./JavaScript Learn with Example/JS Fetch/fetch"
 import Storage from "./JavaScript Learn with Example/JS Storage/storage"
+import NewUser from './JavaScript Learn with Example/JS Modules/main';
 
 
 
@@ -19,8 +20,9 @@ function App() {
     
     //Fetch()
     
-    Storage()
+    //Storage()
     
+    NewUser()
   );
 }
 
