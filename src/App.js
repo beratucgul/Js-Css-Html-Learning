@@ -6,6 +6,7 @@ import Redux from "./ReduxFolder/redux"
 import Fetch from "./JavaScript Learn with Example/JS Fetch/fetch"
 import Storage from "./JavaScript Learn with Example/JS Storage/storage"
 import NewUser from './JavaScript Learn with Example/JS Modules/main';
+import Array from './JavaScript Learn with Example/JS Array Methods/arrays';
 
 
 
@@ -22,7 +23,9 @@ function App() {
     
     //Storage()
     
-    NewUser()
+    //NewUser()
+
+    Array()
   );
 }
 
