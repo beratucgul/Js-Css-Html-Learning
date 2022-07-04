@@ -7,6 +7,8 @@ import Fetch from "./JavaScript Learn with Example/JS Fetch/fetch"
 import Storage from "./JavaScript Learn with Example/JS Storage/storage"
 import NewUser from './JavaScript Learn with Example/JS Modules/main';
 import Array from './JavaScript Learn with Example/JS Array Methods/arrays';
+import Destructuring from './JavaScript Learn with Example/JS Array-Object Destructuring/arrayDestructuring';
+import ObjectDestructuring from './JavaScript Learn with Example/JS Array-Object Destructuring/objectDestructuring';
 
 
 
@@ -25,7 +27,10 @@ function App() {
     
     //NewUser()
 
-    <Array />
+    //<Array />
+
+    //<Destructuring />
+    <ObjectDestructuring />
   );
 }
 
