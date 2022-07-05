@@ -9,6 +9,8 @@ import NewUser from './JavaScript Learn with Example/JS Modules/main';
 import Array from './JavaScript Learn with Example/JS Array Methods/arrays';
 import Destructuring from './JavaScript Learn with Example/JS Array-Object Destructuring/arrayDestructuring';
 import ObjectDestructuring from './JavaScript Learn with Example/JS Array-Object Destructuring/objectDestructuring';
+import UseEffectLearn from './React Learning/React useEffect/useEffectLearn';
+import UseEffectLearn2 from './React Learning/React useEffect/useEffectLearn2';
 
 
 
@@ -30,7 +32,11 @@ function App() {
     //<Array />
 
     //<Destructuring />
-    <ObjectDestructuring />
+    //<ObjectDestructuring />
+
+    //<UseEffectLearn />
+
+    <UseEffectLearn2 />
   );
 }
 
