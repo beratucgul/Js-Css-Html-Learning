@@ -1,7 +1,6 @@
-
 import { View, Text } from 'react-native'
 import React, { useState, useEffect } from 'react'
-import { Button } from 'react-native-web'
+
 
 export default function UseEffectLearn() {
 

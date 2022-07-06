@@ -11,6 +11,7 @@ import Destructuring from './JavaScript Learn with Example/JS Array-Object Destr
 import ObjectDestructuring from './JavaScript Learn with Example/JS Array-Object Destructuring/objectDestructuring';
 import UseEffectLearn from './React Learning/React useEffect/useEffectLearn';
 import UseEffectLearn2 from './React Learning/React useEffect/useEffectLearn2';
+import UseContext from './React Learning/React useContext/useContext';
 
 
 
@@ -36,7 +37,9 @@ function App() {
 
     //<UseEffectLearn />
 
-    <UseEffectLearn2 />
+    //<UseEffectLearn2 />
+
+    <UseContext/>
   );
 }
 
