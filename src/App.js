@@ -12,6 +12,8 @@ import ObjectDestructuring from './JavaScript Learn with Example/JS Array-Object
 import UseEffectLearn from './React Learning/React useEffect/useEffectLearn';
 import UseEffectLearn2 from './React Learning/React useEffect/useEffectLearn2';
 import UseContext from './React Learning/React useContext/useContext';
+import UseContextExample from './React Learning/React useContext/React useContext example/useContextExample';
+import MemoLearning from './React Learning/React useMemo/memoLearning';
 
 
 
@@ -39,7 +41,11 @@ function App() {
 
     //<UseEffectLearn2 />
 
-    <UseContext/>
+    //<UseContext/>
+
+    //<UseContextExample />
+
+    <MemoLearning/>
   );
 }
 
